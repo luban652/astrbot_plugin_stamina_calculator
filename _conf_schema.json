@@ -1,0 +1,63 @@
+{
+  "stamina_limit": {
+    "description": "体力上限设置",
+    "type": "int",
+    "hint": "设置体力上限值（25或50）",
+    "default": 50,
+    "options": [
+      25,
+      50
+    ],
+    "obvious_hint": true
+  },
+  "recovery_rate": {
+    "description": "体力恢复速率（分钟/点）",
+    "type": "int",
+    "hint": "设置每点体力恢复所需的分钟数",
+    "default": 30,
+    "obvious_hint": false
+  },
+  "time_format": {
+    "description": "时间显示格式",
+    "type": "string",
+    "hint": "设置结果显示的时间格式",
+    "default": "HH:mm",
+    "options": [
+      "HH:mm",
+      "h:mm A"
+    ],
+    "obvious_hint": false
+  },
+  "mention_user": {
+    "description": "是否@用户",
+    "type": "bool",
+    "hint": "启用后将在结果中@发送指令的用户",
+    "default": true,
+    "obvious_hint": false
+  },
+  "custom_message": {
+    "description": "自定义结果消息",
+    "type": "text",
+    "hint": "自定义计算结果的消息模板，可用变量：{user}（用户名）、{time}（恢复时间）、{day}（今天/明天）",
+    "default": "{user}，你的体力将在{day}{time}回满",
+    "editor_mode": true,
+    "editor_language": "plaintext",
+    "editor_theme": "vs-light"
+  },
+  "max_stamina_warning": {
+    "description": "超过上限警告",
+    "type": "bool",
+    "hint": "启用后当输入的当前体力超过上限时会发出警告",
+    "default": true,
+    "obvious_hint": false
+  },
+  "invalid_input_message": {
+    "description": "无效输入提示",
+    "type": "text",
+    "hint": "当输入参数无效时的提示消息",
+    "default": "请输入有效的数字参数，示例：/火 20 30",
+    "editor_mode": true,
+    "editor_language": "plaintext",
+    "editor_theme": "vs-light"
+  }
+}
