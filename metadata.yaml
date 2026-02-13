@@ -1,5 +1,5 @@
 name: astrbot_plugin_stamina_calculator
-author: Your Name
+author: luban652
 description: A plugin for calculating stamina recovery time based on custom stamina limits (25 or 50). It calculates when stamina will be fully recovered (30 minutes per point) and mentions the user.
 version: 1.0.0
-repo: https://github.com/yourusername/astrbot_plugin_stamina_calculator
+repo: https://github.com/luban652/astrbot_plugin_stamina_calculator
