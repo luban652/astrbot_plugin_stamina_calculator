@@ -1,52 +1,43 @@
 {
-  "default_stamina_limit": {
-    "description": "默认体力上限",
+  "default_max_stamina": {
+    "description": "全局默认体力上限",
     "type": "int",
-    "hint": "当用户未设置个人上限时使用的全局默认值，通常为 25 或 50。",
+    "hint": "当用户尚未通过指令设置个人上限时，插件计算所采用的初始值（通常为25或50）。",
     "default": 25,
     "options": [
-      "25",
-      "50"
-    ]
-  },
-  "recovery_interval_minutes": {
-    "description": "体力恢复间隔（分钟）",
-    "type": "int",
-    "hint": "恢复 1 点体力所需的分钟数，插件逻辑默认为 30 分钟。",
-    "default": 30
-  },
-  "enable_at_notification": {
-    "description": "全局提醒功能开关",
-    "type": "bool",
-    "hint": "是否允许插件发送定时提醒。关闭后即使个人开启了提醒也不会收到通知。",
-    "default": true
-  },
-  "notification_message": {
-    "description": "体力回满提醒文本",
-    "type": "string",
-    "hint": "当体力回满时发送给用户的提示语。",
-    "default": "你的火已满！"
-  },
-  "max_stamina_options": {
-    "description": "允许设置的体力上限选项",
-    "type": "list",
-    "hint": "限制用户通过指令设置的上限范围。",
-    "default": [
       25,
       50
     ]
   },
-  "database_path": {
-    "description": "数据存储路径",
-    "type": "string",
-    "hint": "用户信息（上限、提醒设置）存储的文件路径，建议保持在 data 目录下。",
-    "default": "data/stamina_calc/user_data.db"
+  "recovery_interval_minutes": {
+    "description": "体力恢复速率（分钟/点）",
+    "type": "int",
+    "hint": "恢复1点体力所需的分钟数。根据描述，默认固定为30分钟。",
+    "default": 30,
+    "obvious_hint": true
   },
-  "help_menu_template": {
-    "description": "帮助菜单模板",
-    "type": "text",
-    "hint": "执行 /火help 时返回的内容，支持多行文本。",
-    "default": "🔥 体力计算插件指令预览：\n1. /火 [当前值] [距离下点恢复时间]: 计算回满时间\n2. /上限 [25/50]: 设置你的体力上限\n3. /提醒 [on/off]: 开启或关闭回满艾特提醒\n4. /火help: 显示此帮助菜单",
-    "editor_mode": true
+  "task_persistence": {
+    "description": "任务持久化",
+    "type": "bool",
+    "hint": "开启后，若机器人重启，插件会尝试从数据库恢复未完成的任务。关闭则重启后任务清空。",
+    "default": true
+  },
+  "admin_only_settings": {
+    "description": "仅限管理员修改上限",
+    "type": "bool",
+    "hint": "若开启，普通用户将无法通过指令修改自己的体力上限，通常保持关闭。",
+    "default": false
+  },
+  "log_level": {
+    "description": "日志详细程度",
+    "type": "string",
+    "hint": "控制插件在后台输出日志的详细程度。",
+    "default": "INFO",
+    "options": [
+      "DEBUG",
+      "INFO",
+      "WARNING",
+      "ERROR"
+    ]
   }
 }
