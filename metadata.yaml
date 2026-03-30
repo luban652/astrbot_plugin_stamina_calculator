@@ -1,5 +1,5 @@
-name: astrbot_plugin_stamina_calc
-author: luban652
-description: 计算游戏体力（火）恢复时间并支持体力回满提醒，支持设置个人体力上限。
+name: astrbot_plugin_stamina_calculator
+author: luban
+description: 游戏体力回复计算与提醒助手。支持设置25或50体力上限，每30分钟回复1点，支持计算回满时间及到时提醒。
 version: 1.0.0
-repo: https://github.com/luban652/astrbot_plugin_stamina_calc
+repo: https://github.com/luban652/astrbot_plugin_stamina_calculator
