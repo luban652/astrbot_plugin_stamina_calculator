@@ -16,12 +16,6 @@
     "default": 30,
     "obvious_hint": true
   },
-  "task_persistence": {
-    "description": "任务持久化",
-    "type": "bool",
-    "hint": "开启后，若机器人重启，插件会尝试从数据库恢复未完成的任务。关闭则重启后任务清空。",
-    "default": true
-  },
   "admin_only_settings": {
     "description": "仅限管理员修改上限",
     "type": "bool",
@@ -39,5 +33,11 @@
       "WARNING",
       "ERROR"
     ]
+  },
+  "auto_reminder": {
+    "description": "自动计算时自动开启提醒",
+    "type": "bool",
+    "hint": "当用户使用/火命令计算回满时间时，是否自动开启提醒功能。",
+    "default": true
   }
 }
